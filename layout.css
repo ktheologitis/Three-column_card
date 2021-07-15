@@ -1,0 +1,155 @@
+@font-face {
+  src: url(fonts/BigShouldersDisplay-Bold.ttf);
+  font-family: BigShoulder;
+}
+
+@font-face {
+  src: url(fonts/LexendDeca-Regular.ttf);
+  font-family: LexendDeca;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 10px;
+  display: flex;
+}
+
+body {
+  background-color: hsl(0, 0%, 95%);
+}
+
+.cards-container {
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 8rem 0;
+}
+
+.card {
+  width: 85%;
+  height: 50rem;
+  padding: 5rem;
+}
+
+.card:nth-child(1) {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card:nth-child(2) {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.card:nth-child(3) {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.icon {
+  height: 5rem;
+  align-self: start;
+}
+
+.title {
+  font-size: 4rem;
+  font-family: BigShoulder;
+  color: hsl(0, 0%, 95%);
+}
+
+.article {
+  font-size: 1.6rem;
+  font-family: LexendDeca;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+button {
+  align-self: start;
+  font-size: 1.6rem;
+  font-family: LexendDeca;
+  padding: 0.8em 1.8em;
+  border-radius: 3rem;
+  border: none;
+}
+
+.button:hover {
+  color: hsl(0, 0%, 95%);
+  background-color: transparent;
+  border: hsl(0, 0%, 95%) solid 2.5px;
+  cursor: pointer;
+}
+
+.button-sedans {
+  color: hsl(31, 77%, 52%);
+}
+
+.button-suvs {
+  color: hsl(184, 100%, 22%);
+}
+
+.button-luxury {
+  color: hsl(179, 100%, 13%);
+}
+
+.stack {
+  --space: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack > * + * {
+  margin-top: var(--space);
+}
+
+.stack:only-child {
+  height: 100%;
+}
+
+.stack > :nth-child(3) {
+  margin-bottom: auto;
+}
+
+@media only screen and (min-width: 769px) {
+  .cards-container {
+    flex-flow: row;
+    width: 85%;
+  }
+
+  .card {
+    width: 33.3%;
+  }
+
+  .card:nth-child(1) {
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .card:nth-child(3) {
+    border-radius: 0 1rem 1rem 0;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .cards-container {
+    width: 65%;
+  }
+
+  .card {
+    height: 50rem;
+  }
+}
