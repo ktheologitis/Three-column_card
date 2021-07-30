@@ -6,6 +6,6 @@
 [Go to demo](https://ktheologitis.github.io/Three-column_card/)
 
 ## <ins>Built with</ins>
--HTML5
--CSS3
--JavaScript (ES6)
+- HTML5
+- CSS3
+- JavaScript (ES6)
